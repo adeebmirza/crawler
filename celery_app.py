@@ -1,6 +1,6 @@
 from celery import Celery
-# from celery_prometheus_exporter import setup_metrics
-# import celery_prometheus_exporter
+from celery_prometheus_exporter import setup_metrics
+import celery_prometheus_exporter
 
 app = Celery('myapp',
              broker='sqs://',
@@ -20,10 +20,10 @@ app.conf.broker_transport_options = {
 app.conf.task_default_queue = 'myquene'
 
 # Configure Prometheus metrics
-# setup_metrics(app)
+setup_metrics(app)
 
-# # Expose metrics on port 8888
-# celery_prometheus_exporter.start_httpd('0.0.0.0:8888')
+# Expose metrics on port 8888
+celery_prometheus_exporter.start_httpd('0.0.0.0:8888')
 
-# if __name__ == '__main__':
-#     app.start()
+if __name__ == '__main__':
+    app.start()
