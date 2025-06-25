@@ -33,10 +33,9 @@ class QuestionRequest(BaseModel):
     image_url: str | None = None
 
 # --- 🔐 API Keys ---
-TAVILY_API_KEY= ""
-FIRECRAWL_API_KEY= ""
-GEMINI_API_KEY= ""
-
+TAVILY_API_KEY= "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"
+FIRECRAWL_API_KEY= "fc-40a0fc219f654a3baf77aebbb88f8f70"
+GEMINI_API_KEY= "AIzaSyB8OkoJsO2t9goI49wXtOQgu1QSufdp5aA"
 #--- Reddit Setup---
 
 client_id="BaxjxvCTqjk817rNQa1VHw"
